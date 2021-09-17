@@ -3,6 +3,6 @@
   vars_files:
     - "{{inventory_dir}}/secrets.yml"
   become: yes
-  debugger: always
+  debugger: on_failed
   roles:
     - role: ml-analytics-service
