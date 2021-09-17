@@ -90,7 +90,7 @@
     src: "config.j2"
     dest: "{{ config_path }}/config.ini"
     backup: yes
-
+  with_dict: "{{ ml_cloud_config }}"
 - name: SYSTEMD DAEMON-RELOAD
   systemd:
     daemon_reload: yes
